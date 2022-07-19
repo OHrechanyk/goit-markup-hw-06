@@ -89,30 +89,49 @@
           
           <form class="form">
             <p class="tittle-form ">Оставьте свои данные, мы вам перезвоним</p>
-
-            <div class="form-field">
+              <div>
+               
               <label class="form-label" for="name">Имя</label>
-            <input class="form-input" type="text" name="name" id="name">
-            </div>
+              <div class="form-field">  
+              <svg class="icon-form" >
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+              <input class="form-input" type="text" name="name" id="name" >
+              
+             </div>
 
-            <div class="form-field">
+            
               <label class="form-label" for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel">
-            </div>
+             <div class="form-field">
+              <svg class="icon-form">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            <input class="form-input" type="tel" name="tel" id="tel">
+             </div>
+            
 
-            <div class="form-field">
+            
               <label class="form-label" for="mail">Почта</label>
-            <input type="email" name="mail" id="mail">
+              <div class="form-field">
+                <svg class="icon-form">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+            <input class="form-input" type="email" name="mail" id="mail">
             </div>
 
           <div class="form-field">
             <label class="form-label" for="comments">Комментарий</label>
-            <textarea name="comments" id="comments" placeholder="Введите текст"></textarea>
+            <textarea class="form-input" name="comments" id="comments" placeholder="Введите текст"></textarea>
           </div>
+        </div>
 
-            <input class="check-input" type="checkbox" name="policy" id="policy">
-            <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-            
+              <div class="check-input">
+            <input  type="checkbox"   name="policy" id="policy" class="checkbox" >
+            <span class="checkbox-icon">
+              <use href=""></use>
+            </span>
+            <label for="policy" class="policy-text"  >Соглашаюсь с рассылкой и принимаю <a href="" class="link-form">Условия договора</a></label>
+          </div>
             <button type="submit" class="hero-button">Отправить</button>
 
            
@@ -513,28 +532,28 @@
             </li>
           </ul>
         </div>
-        <div>
-        <form class="form-footer">
-          
-            <p class="join">Подпишитесь на рассылку</p>
-            <!-- <label for="mail" class="join"></label> -->
+        <div class="footer-form">
+          <p class="join">Подпишитесь на рассылку</p>
+          <form class="subscription" name="subscription" autocomplete="on">
+            <label class="visually-hidden" for="subsrtiption">Почта</label>
             <input
+              class="subscription-input"
               type="email"
-              name="mail"
-              id="mail"
+              name="subsrtiption"
+              id="subsrtiption"
               placeholder="E-mail"
-              class="form-mail"
+              required
             />
-            <button type="button" class="hero-button">
-              <svg class="icon-send">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-              Подписаться
-            </button>
-          </div>
-        </form>
-      </div>
-    </footer>
+            
+              <button class="subscription-button" type="submit">
+                Подписаться
+                <svg class="icon-send">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+              </form>
+        </div>
+      </footer>
     <script src="./js/modal.js"></script>
   </body>
 </html>
